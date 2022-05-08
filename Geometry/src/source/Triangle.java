@@ -27,14 +27,6 @@ public class Triangle extends Shape{
 		return myTriangle;
 	}
 
-	private boolean isEquilateral() {
-		return edges[0]==edges[1] && edges[1]==edges[2];
-	}
-
-	private boolean isIsosceles() {
-		return !this.isEquilateral() && (edges[0]==edges[1] || edges[1]==edges[2] ||edges[0]==edges[2]);
-	}
-
 	public TriangleType getTriangleType() {	
 		if(type==null) {
 			if(isIsosceles()) {
@@ -46,5 +38,13 @@ public class Triangle extends Shape{
 			}			
 		}
 		return type;
+	}
+
+	private boolean isEquilateral() {
+		return edges[0]==edges[1] && edges[1]==edges[2];
+	}
+
+	private boolean isIsosceles() {
+		return !this.isEquilateral() && (edges[0]==edges[1] || edges[1]==edges[2] ||edges[0]==edges[2]);
 	}
 }
