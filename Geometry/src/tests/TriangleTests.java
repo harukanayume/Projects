@@ -1,6 +1,11 @@
+package tests;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import source.Shape;
+import source.Triangle;
+import source.TriangleType;
 
 public class TriangleTests {
 	

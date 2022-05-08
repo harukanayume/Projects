@@ -1,3 +1,4 @@
+package source;
 import java.util.Scanner;
 
 public class Triangle extends Shape{
@@ -31,15 +32,15 @@ public class Triangle extends Shape{
 	}
 
 	private boolean isIsosceles() {
-		return edges[0]==edges[1] || edges[1]==edges[2] ||edges[0]==edges[2];
+		return !this.isEquilateral() && (edges[0]==edges[1] || edges[1]==edges[2] ||edges[0]==edges[2]);
 	}
 
 	public TriangleType getTriangleType() {	
 		if(type==null) {
-			if(isEquilateral()) {
-				type=TriangleType.EQUILATERAL;
-			} else if(isIsosceles()) {
+			if(isIsosceles()) {
 				type=TriangleType.ISOSCELES;
+			} else if(isEquilateral()) {
+				type=TriangleType.EQUILATERAL;
 			} else {
 				type=TriangleType.SCALENE;
 			}			

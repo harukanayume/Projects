@@ -1,4 +1,7 @@
+package tests;
 import org.junit.Test;
+
+import source.Shape;
 
 public class ShapeTests {
 
